@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<layout>
+    <default>
+        <reference name="right">
+            <block type="core/template" name="orange_recentreviews" template="orange/recentreviews/reviews.phtml" />
+        </reference>
+        <reference name="left">
+            <block type="core/template" name="orange_recentreviews" template="orange/recentreviews/reviews.phtml" />
+        </reference>
+    </default>
+</layout>

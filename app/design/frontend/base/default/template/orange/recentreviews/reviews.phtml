@@ -1,0 +1,51 @@
+<?php $_reviews = Mage::getModel('orange_recentreviews/recentreviews') ?>
+<?php if($_reviews->isActive()): ?>
+    <?php if(count($_reviews->data())): ?>
+    <div class="block">
+        <?php if($_reviews->showTitle()): ?>
+        <div class="block-title">
+            <strong>
+                <span><?php echo $this->__($_reviews->getTitle()) ?></span>
+            </strong>
+        </div>
+        <?php endif ?>
+        <div class="block-content">
+            <ul>
+            <?php foreach($_reviews->data() as $_review): ?>
+                <li class="item">
+                    <p><a href="<?php echo $_reviews->getReviewUrl($_review->getId()) ?>"><?php echo $this->htmlEscape($_review->getTitle()) ?></a> - <?php echo $this->__('by <strong>%s</strong>', $this->htmlEscape($_review->getNickname())) ?></p>
+                    <?php if($_reviews->showRatings()): ?>
+                        <?php $_votes = $_review->getRatingVotes() ?>
+                        <?php if(count($_votes)): ?>
+                            <table class="ratings-table">
+                                <col width="1" />
+                                <col />
+                                <tbody>
+                                    <?php foreach($_votes as $_vote): ?>
+                                    <tr>
+                                        <th><?php echo $this->escapeHtml($_vote->getRatingCode()) ?></th>
+                                        <td>
+                                            <div class="rating-box">
+                                                <div class="rating" style="width:<?php echo $_vote->getPercent() ?>%;"></div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <?php endforeach ?>
+                                </tbody>
+                            </table>
+                        <?php endif ?>
+                    <?php endif ?>
+                    <?php $review = nl2br($this->htmlEscape($_review->getDetail())) ?>
+                    <?php if($_reviews->limitCharacters()): ?>
+                        <p><?php echo substr($review, 0, $_reviews->limitCharacters()) . '...' ?></p>
+                    <?php else: ?>
+                        <p><?php echo $review ?></p>
+                    <?php endif ?>
+                    <small class="date"><?php echo $this->__('(Posted on %s)', $this->formatDate($_review->getCreatedAt()), 'long') ?></small>
+                </li>
+            <?php endforeach ?>
+            </ul>
+        </div> 
+    </div>
+    <?php endif ?>
+<?php endif ?>
