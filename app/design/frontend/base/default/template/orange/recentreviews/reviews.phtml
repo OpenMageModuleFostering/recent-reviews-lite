@@ -1,6 +1,5 @@
 <?php $_reviews = Mage::getModel('orange_recentreviews/recentreviews') ?>
 <?php if($_reviews->isActive()): ?>
-    <?php if(count($_reviews->data())): ?>
     <div class="block">
         <?php if($_reviews->showTitle()): ?>
         <div class="block-title">
@@ -10,6 +9,7 @@
         </div>
         <?php endif ?>
         <div class="block-content">
+            <?php if(count($_reviews->data())): ?>
             <ul>
             <?php foreach($_reviews->data() as $_review): ?>
                 <li class="item">
@@ -45,7 +45,9 @@
                 </li>
             <?php endforeach ?>
             </ul>
+            <?php else: ?>
+                <p class="empty"><?php echo $this->__('No reviews found.') ?></p>
+            <?php endif ?>
         </div> 
     </div>
-    <?php endif ?>
 <?php endif ?>

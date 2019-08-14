@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <package>
     <name>recent-reviews-lite</name>
-    <version>0.1.0</version>
+    <version>0.1.1</version>
     <stability>stable</stability>
     <license>Open Software License</license>
     <channel>community</channel>
@@ -10,9 +10,9 @@
     <description>Display latest reviews</description>
     <notes>Stable release</notes>
     <authors><author><name>Mage</name><user>Dev</user><email>mage.ext@gmail.com</email></author></authors>
-    <date>2013-01-07</date>
-    <time>22:38:50</time>
-    <contents><target name="magecommunity"><dir name="Orange"><dir name="RecentReviews"><dir name="Model"><file name="Recentreviews.php" hash="7c751c09965a2897caa1ce6fec651f16"/></dir><dir name="etc"><file name="config.xml" hash="b167c4ef444eca5d912a7d0d5e3c28d0"/><file name="system.xml" hash="1342359e211ce7b5c5eba9f19a4ae7b1"/></dir></dir></dir></target><target name="magedesign"><dir name="frontend"><dir name="base"><dir name="default"><dir name="template"><dir name="orange"><dir name="recentreviews"><file name="reviews.phtml" hash="f13fa9cd56c1d7d84e2f8af9a6d6cba2"/></dir></dir></dir><dir name="layout"><file name="orange_recent_reviews.xml" hash="6937b3d46a4bf1c2ff75139bfafd22ee"/></dir></dir></dir></dir></target><target name="mageetc"><dir name="modules"><file name="Orange_RecentReviews.xml" hash="465284a2cfe768c59f90c44b4b56e793"/></dir></target></contents>
+    <date>2013-01-08</date>
+    <time>21:11:49</time>
+    <contents><target name="magecommunity"><dir name="Orange"><dir name="RecentReviews"><dir name="Model"><file name="Recentreviews.php" hash="7c751c09965a2897caa1ce6fec651f16"/></dir><dir name="etc"><file name="config.xml" hash="b167c4ef444eca5d912a7d0d5e3c28d0"/><file name="system.xml" hash="1342359e211ce7b5c5eba9f19a4ae7b1"/></dir></dir></dir></target><target name="magedesign"><dir name="frontend"><dir name="base"><dir name="default"><dir name="template"><dir name="orange"><dir name="recentreviews"><file name="reviews.phtml" hash="fe2f113f9cade4f158d76ac0c5d9886f"/></dir></dir></dir><dir name="layout"><file name="orange_recent_reviews.xml" hash="6937b3d46a4bf1c2ff75139bfafd22ee"/></dir></dir></dir></dir></target><target name="mageetc"><dir name="modules"><file name="Orange_RecentReviews.xml" hash="465284a2cfe768c59f90c44b4b56e793"/></dir></target></contents>
     <compatible/>
     <dependencies><required><php><min>5.2.0</min><max>6.0.0</max></php></required></dependencies>
 </package>
