@@ -1,16 +1,19 @@
 {
-    "name": "OpenMageModuleFostering/recent-reviews-lite",
+    "name": "OpenMageModuleFostering\/recent-reviews-lite",
     "type": "magento-module",
     "license": "Open-Software-License",
     "homepage": "",
     "description": "Display latest reviews",
     "authors": [
-    {
-        "name": "Mage",
-        "email": "mage.ext@gmail.com"
-    }
-],
+        {
+            "name": "Mage",
+            "email": "mage.ext@gmail.com"
+        }
+    ],
     "suggest": {
-        "magento-hackathon/magento-composer-installer": "*"
-    }
+        "magento-hackathon\/magento-composer-installer": "*"
+    },
+    "keywords": [
+        "openmage-module"
+    ]
 }
